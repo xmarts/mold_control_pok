@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_mold_control_general,mold.control,model_mold_control,mold_control.all_users_mold_control,1,0,0,0
+access_mold_control_manager,mold.control,model_mold_control,mold_control.mold_control_manager,1,1,1,1
+access_model_category_general,model.category,model_model_category,,1,1,1,1

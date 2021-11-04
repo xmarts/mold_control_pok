@@ -1,0 +1,20 @@
+<odoo>
+  <data>
+    <record model="ir.module.category" id="mold_managent_cat">
+        <field name="name">mold_control_category</field>
+        <field name="description">Grupos de acceso a Mold Control</field>
+        <field name="sequence">25</field>
+    </record>
+
+    <record model="res.groups" id="all_users_mold_control">
+        <field name="name">Mold_control_user</field>
+        <field name="category_id" ref="mold_managent_cat" />
+    </record>
+
+    <record model="res.groups" id="mold_control_manager">
+        <field name="name">Mold_control_manager</field>
+        <field name="category_id" ref="mold_managent_cat" />
+        <field name="implied_ids" eval="[(4,ref('all_users_mold_control'))]" />
+    </record>  
+  </data>
+</odoo>

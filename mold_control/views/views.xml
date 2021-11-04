@@ -1,0 +1,121 @@
+<odoo>
+  <data>
+
+    <record model="ir.module.category" id="mold_managent_cat">
+        <field name="name">mold_control_category</field>
+        <field name="description">Grupos de acceso a Mold Control</field>
+        <field name="sequence">25</field>
+    </record>
+
+    <record model="res.groups" id="all_users_mold_control">
+        <field name="name">Mold_control_user</field>
+        <field name="category_id" ref="mold_managent_cat" />
+    </record>
+
+    <record model="res.groups" id="mold_control_manager">
+        <field name="name">Mold_control_manager</field>
+        <field name="category_id" ref="mold_managent_cat" />
+        <field name="implied_ids" eval="[(4,ref('all_users_mold_control'))]" />
+    </record>    
+
+    <record model="ir.ui.view" id="mold_control_list">
+      <field name="name">mold_control list</field>
+      <field name="model">mold.control</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="partner_id"/>
+          <field name="base"/>
+          <field name="height"/>
+          <field name="width"/>
+          <field name="origin"/>
+          <field name="state"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="mold_control_form">
+      <field name="name">mold_control form</field>
+      <field name="model">mold.control</field>
+      <field name="arch" type="xml">
+        <form string="Control de Moldes">
+            <sheet>
+                <group>
+                    <group name='group1'>
+                      <field name="name"/>
+                      <field name="partner_id"/>
+                    </group>
+                    <group name="group2">
+                      <field name="base"/>
+                      <field name="height"/>
+                      <field name="width"/>
+                    </group>
+                    <group name="group3">
+                      <field name="maintenance"/>
+                      <field name="origin"/>
+                      <field name="model"/>
+                      <field name="state"/>
+                      <field name="components"/>
+                      <field name="category"/>
+                      <field name="validity"/>
+                    </group>
+                </group>
+            </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="mold_control_action_window">
+      <field name="name">mold_control window</field>
+      <field name="res_model">mold.control</field>
+      <field name="view_mode">tree,form,kanban</field>
+    </record>
+
+    <menuitem name="mold_control" id="mold_control_menu_root"/>
+
+    <menuitem name="MoldControlList" id="mold_control_menu_1_list" parent="mold_control.mold_control_menu_root"
+              action="mold_control_action_window"/>
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="mold_control.action_window">
+      <field name="name">mold_control window</field>
+      <field name="res_model">mold_control.mold_control</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="mold_control.action_server">
+      <field name="name">mold_control server</field>
+      <field name="model_id" ref="model_mold_control_mold_control"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="mold_control" id="mold_control.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="mold_control.menu_1" parent="mold_control.menu_root"/>
+    <menuitem name="Menu 2" id="mold_control.menu_2" parent="mold_control.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="mold_control.menu_1_list" parent="mold_control.menu_1"
+              action="mold_control.action_window"/>
+    <menuitem name="Server to list" id="mold_control" parent="mold_control.menu_2"
+              action="mold_control.action_server"/>
+-->
+  </data>
+</odoo>
