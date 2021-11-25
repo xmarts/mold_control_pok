@@ -1,0 +1,9 @@
+<odoo>
+    <data>
+
+        <record model="model.category" id="categoria_nuevo">
+            <field name="name">Categoria nueva</field>
+        </record>
+
+    </data>
+</odoo>

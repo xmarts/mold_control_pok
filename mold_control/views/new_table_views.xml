@@ -1,0 +1,39 @@
+<odoo>
+
+    <record model="ir.ui.view" id="new_table_list">
+        <field name="name">Vista New Table List</field>
+        <field name="model">new.table</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="new_table_form">
+        <field name="name">Vista Formulario New Table</field>
+        <field name="model">new.table</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="new_table_action_window">
+        <field name="name">New Table</field>
+        <field name="res_model">new.table</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Lista de New Table"
+              id="new_table_menu"
+              parent="mold_control_menu_root"
+              action="new_table_action_window"/>
+
+
+</odoo>

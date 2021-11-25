@@ -1,32 +1,32 @@
 # -*- coding: utf-8 -*-
 {
     'name': "Control de Moldes",
-
     'summary': """""",
-
     'description': """""",
-
     'author': "POK",
     'website': "http://www.pok.com",
-
-    # Categories can be used to filter modules in modules listing
-    # Check https://github.com/odoo/odoo/blob/14.0/odoo/addons/base/data/ir_module_category_data.xml
-    # for the full list
     'category': 'Uncategorized',
-    'version': '0.1',
-
-    # any module necessary for this one to work correctly
-    'depends': ['base','contacts'],
-
-    # always loaded
+    'version': '14.0.0.0.1',
+    'depends': ['base', 'contacts', 'stock', 'website'],
     'data': [
-        'data/data.xml',
-        'security/ir.model.access.csv',
-        'views/views.xml',
-        # 'views/templates.xml',
-    ],
-    # only loaded in demonstration mode
-    'demo': [
-        'demo/demo.xml',
+        #'data/data.xml',
+	    'data/ir_cron_data.xml',
+	    'data/ir_sequence_data.xml',
+	    'data/mail_template_data.xml',
+	    'data/model.category.csv',
+	    'data/model_category_data.xml',
+	    'security/mold_control_security.xml',
+	    'security/ir.model.access.csv',
+	    'report/mold_report.xml',
+	    'wizard/wizard_change_acceptable_views.xml',
+	    'views/mold_attachment_views.xml',
+	    'views/mold_control_views.xml',
+	    'views/mold_request_views.xml',
+	    'views/mold_revision_views.xml',
+	    'views/mold_tag_views.xml',
+	    'views/new_table_views.xml',
+	    'views/model_category_views.xml',
+	    'views/inherited_res_partner_views.xml',
+	    'views/template.xml',
     ],
 }

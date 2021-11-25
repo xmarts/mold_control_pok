@@ -1,4 +1,15 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_mold_control_general,mold.control,model_mold_control,mold_control.all_users_mold_control,1,0,0,0
-access_mold_control_manager,mold.control,model_mold_control,mold_control.mold_control_manager,1,1,1,1
-access_model_category_general,model.category,model_model_category,,1,1,1,1
+access_mold_control_general,Control Mold Users,model_mold_control,mold_control.all_users_mold_control,1,0,0,0
+access_mold_control_manager,Control Mold Manager,model_mold_control,mold_control.mold_control_manager,1,1,1,1
+access_model_category_users,Model Category Users,model_model_category,mold_control.all_users_mold_control,1,0,0,0
+access_model_category_manager,Model Category Users,model_model_category,mold_control.mold_control_manager,1,1,1,1
+
+access_model_attachment,Acceso a adjuntos de moldes,model_mold_attachment,,1,1,1,1
+access_wizard_change_acceptable,Acceso para cambiar a aceptable el molde,model_wizard_change_acceptable,,1,1,1,1
+access_new_table,Acceso para New Table,model_new_table,,1,1,1,1
+
+access_mold_request_user,Acceso para solicitud de moldes usuario,model_mold_request,mold_control.all_users_mold_control,1,0,1,0
+access_mold_request_manager,Acceso para solicitud de moldes manager,model_mold_request,mold_control.mold_control_manager,1,1,1,1
+
+access_mold_tag_user,Acceso para etiquetas de moldes,model_mold_tag,,1,1,1,1
+access_mold_revision,Acceso para revision de moldes,model_mold_revision,,1,1,1,1

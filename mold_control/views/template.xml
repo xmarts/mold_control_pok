@@ -1,0 +1,217 @@
+<odoo>
+
+        <template id="form_template" name="Ficha">
+            <t t-call="website.layout">
+                <section>
+                    <div class="container mt-5">
+                        <form action="/ficha-action" method="post" enctype="multipart/form-data" style="width:100%">
+                            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                            <div class="row mb-2">
+                                <div class="col-3">Solicitante</div>
+                                <div class="col-6">
+                                    <input type="text" name="partner_name" class="form-control" required="1"/>
+                                </div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-3">Email (Email de solicitante)</div>
+                                <div class="col-6">
+                                    <input type="email" name="partner_email" class="form-control" required="1"/>
+                                </div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-3">Teléfono</div>
+                                <div class="col-6">
+                                    <input type="text" name="partner_phone" class="form-control" required="1"/>
+                                </div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-3">Descripción</div>
+                                <div class="col-6">
+                                    <input type="text" name="asunto" class="form-control"/>
+                                </div>
+                            </div>
+<!--                            <div class="row mb-2">-->
+<!--                                <div class="col-3">Prioridad</div>-->
+<!--                                <div class="col-6">-->
+<!--                                    <select class="form-control" name="sector_id">-->
+<!--                                        <option value=""></option>-->
+<!--                                        <t t-foreach="priorities" t-as="priority">-->
+<!--                                            <option t-att-value="sector.id">-->
+<!--                                                <t t-esc="sector.name"/>-->
+<!--                                            </option>-->
+<!--                                        </t>-->
+<!--                                    </select>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--        -->
+                            <div class="row mb-2">
+                                <div class="col-3">Prioridad</div>
+                                <div class="col-6">
+                                    <select class="form-control" name="prioridad">
+                                        <option value=""></option>
+                                        <option value="0">Bajo</option>
+                                        <option value="1">Medio</option>
+                                        <option value="2">Alto</option>
+                                        <option value="3">Muy Alto</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!--<div class="row mb-2">-->
+                            <!--<div class="col-3">Responsable/Organizador</div>-->
+                            <!--<div class="col-6"><input type="text" class="form-control" /></div>-->
+                            <!--</div>-->
+<!--                            <div class="row mb-2">-->
+<!--                                <div class="col-3">Sector</div>-->
+<!--                                <div class="col-6">-->
+<!--                                    <select class="form-control" name="sector_id">-->
+<!--                                        <option value=""></option>-->
+<!--                                        <t t-foreach="sectors" t-as="sector">-->
+<!--                                            <option t-att-value="sector.id">-->
+<!--                                                <t t-esc="sector.name"/>-->
+<!--                                            </option>-->
+<!--                                        </t>-->
+<!--                                    </select>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="row mb-2">-->
+<!--                                <div class="col-3">Tipo de Ficha</div>-->
+<!--                                <div class="col-6">-->
+<!--                                    <select class="form-control" name="tipo_ficha">-->
+<!--                                        <option value=""></option>-->
+<!--                                        <option value="Audiencia/Taller">Audiencia/Taller</option>-->
+<!--                                        <option value="Eventos/Territorio">Eventos/Territorio</option>-->
+<!--                                    </select>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                            <div class="row mb-2">-->
+<!--                                <div class="col-3">Prioridad</div>-->
+<!--                                <div class="col-6">-->
+<!--                                    <select class="form-control" name="prioridad_ficha">-->
+<!--                                        <option value=""></option>-->
+<!--                                        <option value="normal">Normal</option>-->
+<!--                                        <option value="importante">Importante</option>-->
+<!--                                        <option value="urgente">Importante/Urgente</option>-->
+<!--                                    </select>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="row mb-2">-->
+<!--                                <div class="col-3">Carácter de la Actividad</div>-->
+<!--                                <div class="col-6">-->
+<!--                                    <select class="form-control" name="caracter_ficha">-->
+<!--                                        <option value="publica">Publica</option>-->
+<!--                                        <option value="privada">Privada</option>-->
+
+<!--                                    </select>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="row mb-2">-->
+<!--                                <div class="col-3">Fecha Sugerida</div>-->
+<!--                                <div class="col-6">-->
+<!--                                    <input type="date" name="fecha_sugerida" class="form-control"/>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="row mb-2">-->
+<!--                                <div class="col-3">Hora Sugerida</div>-->
+<!--                                <div class="col-6">-->
+<!--                                    <input type="number" step="0.01" name="hora_sugerida" class="form-control"/>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="row mb-2">-->
+<!--                                <div class="col-3">Provincia</div>-->
+<!--                                <div class="col-6">-->
+<!--                                    <select class="form-control" name="provincia_id">-->
+<!--                                        <option value=""></option>-->
+<!--                                        <t t-foreach="provinces" t-as="province">-->
+<!--                                            <option t-att-value="province.id">-->
+<!--                                                <t t-esc="province.name"/>-->
+<!--                                            </option>-->
+<!--                                        </t>-->
+<!--                                    </select>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="row mb-2">-->
+<!--                                <div class="col-3">Cantón</div>-->
+<!--                                <div class="col-6">-->
+<!--                                    <select class="form-control" name="canton_id">-->
+<!--                                        <option value=""></option>-->
+<!--                                        <t t-foreach="cantons" t-as="canton">-->
+<!--                                            <option t-att-value="canton.id">-->
+<!--                                                <t t-esc="canton.name"/>-->
+<!--                                            </option>-->
+<!--                                        </t>-->
+<!--                                    </select>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="row mb-2">-->
+<!--                                <div class="col-3">Parroquia</div>-->
+<!--                                <div class="col-6">-->
+<!--                                    <select class="form-control" name="parroquia_id">-->
+<!--                                        <option value=""></option>-->
+<!--                                        <t t-foreach="parishs" t-as="parish">-->
+<!--                                            <option t-att-value="parish.id">-->
+<!--                                                <t t-esc="parish.name"/>-->
+<!--                                            </option>-->
+<!--                                        </t>-->
+<!--                                    </select>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="row mb-2">-->
+<!--                                <div class="col-3">Dirección</div>-->
+<!--                                <div class="col-6">-->
+<!--                                    <input type="text" name="direccion" class="form-control"/>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="row mb-2">-->
+<!--                                <div class="col-3">Aforo (pax)</div>-->
+<!--                                <div class="col-6">-->
+<!--                                    <input type="number" name="aforo" class="form-control"/>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                             <div class="row mb-2">-->
+<!--                                <div class="col-3">Notas Adicionales</div>-->
+<!--                                <div class="col-6">-->
+<!--                                    <textarea name="notas" class="form-control"/>-->
+<!--                                </div>-->
+<!--                            </div>-->
+                            <button type="submit" class="mx-auto btn btn-primary">Enviar</button>
+                        </form>
+                    </div>
+                </section>
+            </t>
+    </template>
+
+<!--    <tbody>-->
+
+<!--        <t t-foreach=”my_details” t-as=”order”>-->
+
+<!--        <tr>-->
+
+<!--            <td><span t-esc=”order.name”/></td>-->
+
+<!--            <td><span t-esc=”order.partner_id.name”/></td>-->
+
+<!--            <td><span t-esc=”order.date_order”/></td>-->
+
+<!--            <td><span t-esc=”order.state”/></td>-->
+
+<!--        </tr>-->
+
+<!--    </t>-->
+
+<!--</tbody>-->
+
+    <template id="ficha_thank_you" name="Ficha Thank You">
+        <t t-call="website.layout">
+            <section>
+                <div class="container mt-5">
+                    <div class="row"/>
+                    <div class="row">
+                        La ficha ha sido enviada, por favor tenga en cuenta que debe revisar su correo constantemente.
+                    </div>
+                </div>
+            </section>
+        </t>
+    </template>
+
+</odoo>

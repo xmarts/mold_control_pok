@@ -1,0 +1,17 @@
+<odoo>
+
+    <record model="ir.ui.view" id="mold_revision_list">
+        <field name="name">Vista Lista de Revisiones de Moldes</field>
+        <field name="model">mold.revision</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="mold_id" invisible="1"/>
+                <field name="user_id"/>
+                <field name="state"/>
+                <field name="name"/>
+                <field name="create_date"/>
+            </tree>
+        </field>
+    </record>
+
+</odoo>

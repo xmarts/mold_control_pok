@@ -1,0 +1,30 @@
+<odoo>
+
+    <record model="ir.ui.view" id="wizard_change_acceptable_form_view">
+        <field name="name">Vista Formulario para Cambiar a Aceptable</field>
+        <field name="model">wizard.change.acceptable</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="mold_control_id" readonly="1"/>
+                        <field name="description"/>
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="button_add_description" class="btn-primary" string="Agregar Descripción" type="object"/>
+                    <button special="cancel" string="Cancelar"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="wizard_change_acceptable_action_window">
+        <field name="name">Wizard para cambiar a aceptable</field>
+        <field name="res_model">wizard.change.acceptable</field>
+        <field name="view_mode">form</field>
+        <field name="target">current</field>
+    </record>
+
+
+</odoo>

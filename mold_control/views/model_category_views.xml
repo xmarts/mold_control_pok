@@ -1,0 +1,40 @@
+<odoo>
+    
+    <record model="ir.ui.view" id="model_category_list">
+        <field name="name">Vista Lista de Categoría</field>
+        <field name="model">model.category</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="model_category_form_category">
+        <field name="name">Vista Formulario de Categorías</field>
+        <field name="model">model.category</field>
+        <field name="arch" type="xml">
+            <form string="Control de Moldes">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="mold_control_ids" context="{'default_category_id': active_id}"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="model_category_action_window">
+        <field name="name">Categorías</field>
+        <field name="res_model">model.category</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Lista de Categorías"
+              id="model_category_menu"
+              parent="mold_control_menu_root"
+              action="model_category_action_window"/>
+
+
+</odoo>

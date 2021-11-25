@@ -1,0 +1,17 @@
+<odoo noupdate="0">
+
+    <record id="sequence_mold_control" model="ir.sequence">
+        <field name="name">Secuencia para moldes</field>
+        <field name="code">mold.control.sequence</field>
+        <field name="prefix">MOLD-</field>
+        <field name="padding">4</field>
+    </record>
+
+    <record id="sequence_mold_request" model="ir.sequence">
+        <field name="name">Secuencia para solicitud de moldes</field>
+        <field name="code">mold.request.sequence</field>
+        <field name="prefix">SM-</field>
+        <field name="padding">4</field>
+    </record>
+
+</odoo>

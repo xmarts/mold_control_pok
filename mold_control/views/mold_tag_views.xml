@@ -1,0 +1,26 @@
+<odoo>
+
+    <record model="ir.ui.view" id="mold_tag_list">
+        <field name="name">Vista Lista de Etiquetas de Moldes</field>
+        <field name="model">mold.tag</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="name"/>
+                <field name="color" widget="color_picker"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="mold_tag_action_window">
+        <field name="name">Etiquetas</field>
+        <field name="res_model">mold.tag</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <menuitem name="Etiquetas"
+              id="mold_tag_menu"
+              parent="mold_control_menu_settings_root"
+              sequence="1"
+              action="mold_tag_action_window"/>
+
+</odoo>

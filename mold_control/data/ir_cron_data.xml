@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="ir_cron_mold_creation" model="ir.cron">
+        <field name="name">Cron para crear moldes automaticamente</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">hours</field>
+        <field name="numbercall">-1</field>
+        <field name="model_id" ref="mold_control.model_mold_control"/>
+        <field name="code">model._cron_mold_creation()</field>
+        <field name="doall" eval="False"/>
+        <field name="state">code</field>
+    </record>
+
+    <record id="ir_cron_mold_state_validation" model="ir.cron">
+        <field name="name">Cron para verificar estado de molde</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">hours</field>
+        <field name="numbercall">-1</field>
+        <field name="model_id" ref="mold_control.model_mold_control"/>
+        <field name="code">model._cron_mold_state_validation()</field>
+        <field name="doall" eval="False"/>
+        <field name="state">code</field>
+    </record>
+
+</odoo>

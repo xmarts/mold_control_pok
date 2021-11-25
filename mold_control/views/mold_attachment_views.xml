@@ -1,0 +1,36 @@
+<odoo>
+
+    <record model="ir.ui.view" id="mold_attachment_list">
+        <field name="name">Vista Lista de Adjuntos de Moldes</field>
+        <field name="model">mold.attachment</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="attachment" filename="attachment_filename"/>
+                <field name="attachment_filename" invisible="1"/>
+                <field name="mold_control_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="mold_attachment_form">
+        <field name="name">Vista Formulario de Adjunto de Moldes</field>
+        <field name="model">mold.attachment</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group name='group1'>
+                        <group>
+                            <field name="name"/>
+                            <field name="attachment" filename="attachment_filename"/>
+                            <field name="attachment_filename" invisible="1"/>
+                            <field name="mold_control_id" readonly="1"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+</odoo>

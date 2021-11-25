@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="ir.actions.report" id="mold_control_report_action">
+        <field name="name">Reporte de Moldes</field>
+        <field name="model">mold.control</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">mold_control.report_mold_control_qweb</field>
+        <field name="report_file">mold_control.report_mold_control_qweb</field>
+        <field name="binding_model_id" ref="mold_control.model_mold_control"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="report_mold_control_qweb">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <div class="page">
+                    <table class="table table-sm" style="width:100%;border-collapse:collapse;text-align:center">
+                        <thead>
+                            <th style="font-weight:bold;font-size:30px;color:red">
+                                CÓDIGO:
+                            </th>
+                            <th>
+                                MOLDE:
+                            </th>
+                            <th>
+                                FECHA DE REGISTRO:
+                            </th>
+                            <th>
+                                BASE:
+                            </th>
+                            <th>
+                                ALTURA:
+                            </th>
+                            <th>
+                                VARIABLE:
+                            </th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span t-esc="o.code"/>
+                                </td>
+                                <td>
+                                   <span t-esc="o.code"/>
+                                </td>
+                                <td>
+                                  <span t-field="o.name"/>
+                                </td>
+                                <td>
+                                     <span t-field="o.register_date"/>
+                                </td>
+                                <td>
+                                    <span t-field="o.base"/>
+                                </td>
+                                <td>
+                                     <span t-field="o.height"/>
+                                </td>
+                                <td>
+                                    <t t-set="line" t-value="1+2"/>
+                                    <span t-esc="line"/>
+                                </td>
+                            </tr>
+<!--                            <tr t-foreach="o.invoice_line_ids" t-as="line">-->
+<!--                                <td style="border: 1px solid"><span t-esc="line.product_id.default_code or ' '"/></td>-->
+<!--                                <td style="border: 1px solid"><span t-esc="'%.2f' % line.quantity"/></td>-->
+<!--                                <td style="border: 1px solid"><span t-esc="line.name or ' '"/></td>-->
+<!--                                <td style="border: 1px solid"><span t-field="line.price_unit"-->
+<!--                                                                    t-options='{"widget": "monetary", "display_currency": o.currency_id}'/></td>-->
+<!--                                &lt;!&ndash; <td style="border: 1px solid"><span >0.00</span></td>-->
+<!--                                <td style="border: 1px solid"><span >0.00</span></td> &ndash;&gt;-->
+<!--                                <td style="border: 1px solid"><span t-esc="'%.2f' % line.discount "/></td>-->
+<!--                                <td style="border: 1px solid"><span t-field="line.price_subtotal"-->
+<!--                                                                    t-options='{"widget": "monetary", "display_currency": o.currency_id}'/></td>-->
+<!--                            </tr>-->
+                        </tbody>
+                    </table>
+
+
+                </div>
+            </t>
+        </t>
+</template>
+
+</odoo>

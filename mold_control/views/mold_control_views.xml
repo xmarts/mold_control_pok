@@ -1,0 +1,196 @@
+<odoo>
+
+    <record model="ir.ui.view" id="mold_control_list">
+        <field name="name">Vista Lista de Control de Moldes</field>
+        <field name="model">mold.control</field>
+        <field name="arch" type="xml">
+            <tree
+                    decoration-success="state == 'optimo'"
+                    decoration-warning="state == 'aceptable'"
+                    decoration-danger="state == 'deteriorado'">
+                <field name="name"/>
+                <field name="partner_id"/>
+                <field name="base"/>
+                <field name="height"/>
+                <field name="width"/>
+                <field name="origin"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="mold_control_list_2">
+        <field name="name">Vista Lista de Control de Moldes Deteriorados</field>
+        <field name="model">mold.control</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="mold_control_search">
+        <field name="name">Vista de Búsqueda de Control de Moldes</field>
+        <field name="model">mold.control</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="partner_id"/>
+                <field name="base"/>
+                <field name="height"/>
+                <field name="width"/>
+                <field name="origin"/>
+                <field name="state"/>
+                <filter name="filtro_state_optimo" string="Moldes Óptimos" domain="[('state','=','optimo')]"/>
+                <filter name="group_by_state" string="Estado" context="{'group_by':'state'}"/>
+            </search>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="mold_control_form">
+        <field name="name">Vista Formulario de Moldes</field>
+        <field name="model">mold.control</field>
+        <field name="arch" type="xml">
+            <form string="Control de Moldes">
+                <header>
+                    <button name="button_optimo" class="btn-primary" string="Optimo" attrs="{'invisible':[('state','=', 'optimo')]}" type="object"/>
+                    <button name="button_aceptable" class="btn-warning" string="Aceptable" attrs="{'invisible':[('state','=', 'aceptable')]}" type="object"/>
+                    <button name="button_deteriorado" class="btn-danger" string="Deteriorado" attrs="{'invisible':[('state','=', 'deteriorado')]}" type="object"/>
+                    <button name="%(wizard_change_acceptable_action_window)d" class="btn-info" string="Cambiar a Aceptable XML" context="{'default_mold_control_id': active_id}" attrs="{'invisible':[('state','=', 'aceptable')]}" type="action"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <header>
+                    <button name="button_draft" class="btn-primary" string="Cambiar a Borrador" attrs="{'invisible':[('state_2','=', 'draft')]}" type="object"/>
+                    <button name="button_done" class="btn-warning" string="Cambiar a Hecho" attrs="{'invisible':[('state_2','=', 'done')]}" type="object"/>
+                    <field name="state_2" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="buttons">
+                        <button class="oe_inline oe_stat_button"
+                                name="button_add_attachment"
+                                type="object"
+                                icon="fa-pencil">
+                            <field string="Adjuntos" name="attachment_count" widget="statinfo"/>
+                        </button>
+                    </div>
+                    <group name='group1'>
+                        <group>
+                            <field name="code" readonly="1"/>
+                            <field name="name" required="1"/>
+                            <field name="company_id"/>
+                            <field name="partner_id" attrs="{'invisible': [('maintenance', '=', 'interno')]}"/>
+                        </group>
+                        <group>
+                            <field name="image" widget="image" class="oe_avatar"/>
+                            <field name="partner_id" attrs="{'invisible': [('maintenance', '=', 'interno')]}"/>
+                            <field name="product_id"/>
+                            <field name="list_price"/>
+                        </group>
+                        <group>
+                            <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color', 'no_create_edit': True}"/>
+                            <field name="register_date"/>
+                            <field name="days"/>
+                            <field name="expiration_date"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Dimensiones">
+                            <group name="group2" string="Dimensiones">
+                                <field name="base" required="1"/>
+                                <field name="height" required="1"/>
+                                <field name="width" required="1"/>
+                                <field name="volumen"/>
+                                <field name="area"/>
+                            </group>
+                            <group name="group3" string="Miscelaneos">
+                                <field name="wh_id"/>
+                                <field name="maintenance"/>
+                                <field name="origin"/>
+                                <field name="model"/>
+                                <field name="components"/>
+                                <field name="category_id"/>
+                                <field name="validity"/>
+                            </group>
+                        </page>
+                        <page string="Revisiones">
+                            <group>
+                                <field name="revision_ids"/>
+                            </group>
+                            <group>
+                                <field name="description"/>
+                            </group>
+                            <group name="group4" string="Adjuntos">
+                                <group>
+                                    <field name="attachment_ids"  widget="many2many_binary"/>
+                                </group>
+                            </group>
+
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="mold_control_form_2">
+        <field name="name">Vista Formulario de Moldes Deteriorados</field>
+        <field name="model">mold.control</field>
+        <field name="arch" type="xml">
+            <form string="Control de Moldes">
+                <header>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <group name='group1' string="Moldes">
+                        <field name="image" widget="image" class="oe_avatar"/>
+                        <field name="name"/>
+                        <field name="partner_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="mold_control_optimo_action_window">
+        <field name="name">Control de Moldes</field>
+        <field name="res_model">mold.control</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_ids" eval="[(5, 0, 0),
+            (0, 0, {'view_mode': 'tree', 'view_id': ref('mold_control_list')}),
+            (0, 0, {'view_mode': 'form', 'view_id': ref('mold_control_form')})]"/>
+    </record>
+
+<!--    <record model="ir.actions.act_window" id="mold_control_deteriorado_action_window">-->
+<!--        <field name="name">Control de Moldes Deteriorados</field>-->
+<!--        <field name="res_model">mold.control</field>-->
+<!--        <field name="view_mode">tree,form,kanban</field>-->
+<!--        <field name="domain">[('state', '=', 'deteriorado')]</field>-->
+<!--        <field name="context">{'default_state': 'deteriorado'}</field>-->
+<!--        <field name="view_ids" eval="[(5, 0, 0),-->
+<!--            (0, 0, {'view_mode': 'tree', 'view_id': ref('mold_control_list_2')}),-->
+<!--            (0, 0, {'view_mode': 'form', 'view_id': ref('mold_control_form_2')})]"/>-->
+<!--    </record>-->
+
+    <menuitem name="Control de Moldes"
+              id="mold_control_menu_root"/>
+
+    <menuitem name="Configuraciones"
+              id="mold_control_menu_settings_root"
+              parent="mold_control_menu_root"/>
+
+    <menuitem name="Lista de Moldes"
+              id="mold_control_optimo_menu"
+              parent="mold_control_menu_root"
+              action="mold_control_optimo_action_window"/>
+
+<!--    <menuitem name="Lista de Moldes Deteriorados"-->
+<!--              id="mold_control_deteriorado_menu"-->
+<!--              parent="mold_control_menu_root"-->
+<!--              action="mold_control_deteriorado_action_window"/>-->
+
+
+</odoo>
