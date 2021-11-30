@@ -12,4 +12,5 @@ access_mold_request_user,Acceso para solicitud de moldes usuario,model_mold_requ
 access_mold_request_manager,Acceso para solicitud de moldes manager,model_mold_request,mold_control.mold_control_manager,1,1,1,1
 
 access_mold_tag_user,Acceso para etiquetas de moldes,model_mold_tag,,1,1,1,1
+access_mold_stage,Acceso Etapa solicitud de moldes,model_mold_request_stage,,1,1,1,1
 access_mold_revision,Acceso para revision de moldes,model_mold_revision,,1,1,1,1

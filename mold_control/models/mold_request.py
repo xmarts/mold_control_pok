@@ -17,6 +17,10 @@ class MoldRequest(models.Model):
 		string='Solicitante',
 		default=lambda self: self.env.user.partner_id.id
 	)
+	stage_id = fields.Many2one(
+		'mold.request.stage',
+		string='Etapa',
+	)
 	state = fields.Selection([
 		('draft', 'Borrador'),
 		('approved', 'Aprobada'),

@@ -3,6 +3,7 @@ from datetime import timedelta
 
 from odoo import models, fields, api
 from odoo.exceptions import ValidationError
+from odoo.http import request
 
 
 class MoldControl(models.Model):
@@ -127,6 +128,11 @@ class MoldControl(models.Model):
         'mold_id',
         string="Revisiones",
     )
+    repair_order_ids = fields.One2many(
+        'repair.order',
+        'mold_control_id',
+        string="Reparaciones",
+    )
 
     def button_aceptable(self):
         return {
@@ -137,6 +143,36 @@ class MoldControl(models.Model):
             'target': 'new',
             'context': {'default_mold_control_id': self.id},
         }
+
+    def button_repair(self):
+        self.env['repair.order'].create({
+            'mold_control_id': self.id,
+	        'location_id': self.env.ref('stock.location_order').id,
+	        'partner_id': self.partner_id.id,
+            'product_id': self.product_id.id,
+	        'product_uom': self.product_id.uom_id.id,
+        })
+
+
+    def button_send_mail(self):
+        for mold in self:
+            menu = self.env.ref("mold_control.mold_control_optimo_menu")
+            action = menu.action
+            url = (
+                "{}#id={}&action={}&model={}&view_type=form&menu_id={}".format(
+                    request.httprequest.environ["HTTP_REFERER"],
+                    str(mold.id),
+                    str(action.id),
+                    mold._name,
+                    str(menu.id)
+                )
+            )
+
+            template = self.env.ref('mold_control.mold_control_state_template')
+            template.email_to = mold.partner_id.email
+          #  template.attachment_ids = [(6, 0, mold.attachment_ids.ids)]
+            template.with_context(url=url).send_mail(mold.id, force_send=True)
+
         # else:
         # 	raise ValidationError(
         # 		'El estado no es deteriorado, por lo que no se puede cambiar'
@@ -257,12 +293,13 @@ class MoldControl(models.Model):
 
     @api.model
     def _cron_mold_state_validation(self):
-        mold_ids = self.search([()])
+        mold_ids = self.search([])
         for mold in mold_ids:
             if mold.revision_ids:
+                mold.state = mold.revision_ids[-1].state
                 if mold.revision_ids[-1].state == 'deteriorado':
-                    mold.state = 'deteriorado'
                     mold.active = False
+
 
 
 

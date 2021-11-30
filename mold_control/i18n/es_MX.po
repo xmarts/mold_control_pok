@@ -1,0 +1,1214 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mold_control
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-26 19:24+0000\n"
+"PO-Revision-Date: 2021-11-26 14:26-0500\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.2.4\n"
+"Last-Translator: \n"
+"Language: es_MX\n"
+
+#. module: mold_control
+#: model_terms:ir.ui.view,arch_db:mold_control.view_mold_request_kanban
+msgid "<b> Descripción</b>"
+msgstr ""
+
+#. module: mold_control
+#: model:mail.template,body_html:mold_control.mold_control_state_template
+msgid ""
+"<span style=\"font-family: Arial; font-size:14px;\">\n"
+"                <p>Estimado/a</p>\n"
+"                <p> Adjunto se le envia un reporte con el estado de su mold "
+"${object.code}.\n"
+"                    También puede acceder a la siguiente url para revisar el "
+"estatus del molde</p>\n"
+"                <p>             <a href=\"${ctx['url']}\">${object.name}</"
+"a></p>\n"
+"                <p>Saludos cordiales.</p>\n"
+"                <p>ADMINISTRADOR</p>\n"
+"                <p>Para mayor información, escribir un mail a ${object."
+"company_id.email}</p>\n"
+"            </span>\n"
+"        "
+msgstr ""
+
+#. module: mold_control
+#: model:mail.template,body_html:mold_control.mold_request_template
+msgid ""
+"<span style=\"font-family: Arial; font-size:14px;\">\n"
+"                <p>Estimado/a</p>\n"
+"                <p> Ha sido ingresada una nueva solicitud para moldes por "
+"${object.partner_id.name}\n"
+"                </p>\n"
+"                <p>Saludos cordiales.</p>\n"
+"                <p>ADMINISTRADOR</p>\n"
+"                <p>Para mayor información, escribir un mail a ${object."
+"company_id.email}</p>\n"
+"            </span>\n"
+"        "
+msgstr ""
+
+#. module: mold_control
+#: model:mail.template,body_html:mold_control.notificacion_creacion_molde
+msgid ""
+"<span style=\"font-family: Arial; font-size:14px;\">\n"
+"                <p>Estimado/a</p>\n"
+"                <p> Se ha creado el molde con código ${object.code}\n"
+"                </p>\n"
+"                <p>Saludos cordiales.</p>\n"
+"                <p>ADMINISTRADOR</p>\n"
+"                <p>Para mayor información, escribir un mail a elymar."
+"alfaro@gmail.com</p>\n"
+"            </span>\n"
+"        "
+msgstr ""
+
+#. module: mold_control
+#: model:mail.template,body_html:mold_control.notificacion_eliminacion_molde
+msgid ""
+"<span style=\"font-family: Arial; font-size:14px;\">\n"
+"                <p>Estimado/a</p>\n"
+"                <p> Se le notifica que se ha eliminado el molde ${object."
+"code}</p>\n"
+"                <p>Saludos cordiales.</p>\n"
+"                <p>ADMINISTRADOR</p>\n"
+"                <p>Para mayor información, escribir un mail a elymar."
+"alfaro@gmail.com</p>\n"
+"            </span>\n"
+"        "
+msgstr ""
+
+#. module: mold_control
+#: model:mail.template,body_html:mold_control.notificacion_modificacion_molde
+msgid ""
+"<span style=\"font-family: Arial; font-size:14px;\">\n"
+"                <p>Estimado/a</p>\n"
+"                <p> Se le notifica que se han modificado los datos del molde "
+"${object.code}\n"
+"                </p>\n"
+"                <p>Saludos cordiales.</p>\n"
+"                <p>ADMINISTRADOR</p>\n"
+"                <p>Para mayor información, escribir un mail a elymar."
+"alfaro@gmail.com</p>\n"
+"            </span>\n"
+"        "
+msgstr ""
+
+#. module: mold_control
+#: model_terms:ir.ui.view,arch_db:mold_control.view_mold_request_kanban
+msgid "<span>Aprobar</span>"
+msgstr ""
+
+#. module: mold_control
+#: model_terms:ir.ui.view,arch_db:mold_control.report_mold_control_qweb
+msgid "<span>Estado de Molde</span>"
+msgstr ""
+
+#. module: mold_control
+#: model_terms:ir.ui.view,arch_db:mold_control.report_mold_control_qweb
+msgid "<span>Solicitante: </span>"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields.selection,name:mold_control.selection__mold_control__state__aceptable
+#: model:ir.model.fields.selection,name:mold_control.selection__mold_revision__state__aceptable
+#: model_terms:ir.ui.view,arch_db:mold_control.mold_control_form
+msgid "Aceptable"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_control__message_needaction
+#: model:ir.model.fields,field_description:mold_control.field_mold_request__message_needaction
+#: model:ir.model.fields,field_description:mold_control.field_new_table__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_request__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_request__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_request__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_request__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_control__active
+#: model:ir.model.fields,field_description:mold_control.field_mold_request_stage__active
+#: model:ir.model.fields,field_description:mold_control.field_new_table__active
+msgid "Activo"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model,name:mold_control.model_mold_attachment
+#: model:ir.model.fields,field_description:mold_control.field_mold_control__attachment_ids
+#: model:ir.model.fields,field_description:mold_control.field_new_table__attachment_ids
+#: model_terms:ir.ui.view,arch_db:mold_control.mold_control_form
+msgid "Adjuntos"
+msgstr ""
+
+#. module: mold_control
+#: model_terms:ir.ui.view,arch_db:mold_control.wizard_change_acceptable_form_view
+msgid "Agregar Descripción"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_control__wh_id
+#: model:ir.model.fields,field_description:mold_control.field_new_table__wh_id
+msgid "Almacén"
+msgstr ""
+
+#. module: mold_control
+#: model_terms:ir.ui.view,arch_db:mold_control.form_template
+msgid "Alto"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_control__height
+#: model:ir.model.fields,field_description:mold_control.field_new_table__height
+msgid "Altura"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_control__width
+#: model:ir.model.fields,field_description:mold_control.field_new_table__width
+msgid "Anchura"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields.selection,name:mold_control.selection__mold_request__state__approved
+msgid "Aprobada"
+msgstr ""
+
+#. module: mold_control
+#: model_terms:ir.ui.view,arch_db:mold_control.mold_request_form
+msgid "Aprobar"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_attachment__attachment
+msgid "Archivo"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_control__message_attachment_count
+#: model:ir.model.fields,field_description:mold_control.field_mold_request__message_attachment_count
+#: model:ir.model.fields,field_description:mold_control.field_new_table__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: mold_control
+#: model_terms:ir.ui.view,arch_db:mold_control.form_template
+msgid "Bajo"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_control__base
+#: model:ir.model.fields,field_description:mold_control.field_new_table__base
+msgid "Base"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields.selection,name:mold_control.selection__company_mixin__state_2__draft
+#: model:ir.model.fields.selection,name:mold_control.selection__mold_control__state_2__draft
+#: model:ir.model.fields.selection,name:mold_control.selection__mold_request__state_2__draft
+#: model:ir.model.fields.selection,name:mold_control.selection__mold_request__state__draft
+#: model:ir.model.fields.selection,name:mold_control.selection__mold_request_stage__state_2__draft
+msgid "Borrador"
+msgstr ""
+
+#. module: mold_control
+#: model_terms:ir.ui.view,arch_db:mold_control.mold_control_form
+msgid "Cambiar a Aceptable XML"
+msgstr "Botón XML"
+
+#. module: mold_control
+#: model_terms:ir.ui.view,arch_db:mold_control.mold_control_form
+msgid "Cambiar a Borrador"
+msgstr ""
+
+#. module: mold_control
+#: model_terms:ir.ui.view,arch_db:mold_control.mold_control_form
+msgid "Cambiar a Hecho"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields.selection,name:mold_control.selection__mold_request__state__cancel
+msgid "Cancelada"
+msgstr ""
+
+#. module: mold_control
+#: model_terms:ir.ui.view,arch_db:mold_control.mold_request_form
+#: model_terms:ir.ui.view,arch_db:mold_control.wizard_change_acceptable_form_view
+msgid "Cancelar"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_control__category_id
+#: model:ir.model.fields,field_description:mold_control.field_new_table__category_id
+msgid "Categoria-Material"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model,name:mold_control.model_model_category
+msgid "Categoria-Materiales"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.actions.act_window,name:mold_control.model_category_action_window
+msgid "Categorías"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,help:mold_control.field_mold_control__base
+#: model:ir.model.fields,help:mold_control.field_new_table__base
+msgid "Colocar en base a cm"
+msgstr ""
+
+#. module: mold_control
+#: model_terms:ir.ui.view,arch_db:mold_control.mold_request_form
+msgid "Coloque las dimensiones del molde"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_request__color
+#: model:ir.model.fields,field_description:mold_control.field_mold_tag__color
+msgid "Color"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_company_mixin__company_id
+#: model:ir.model.fields,field_description:mold_control.field_mold_control__company_id
+#: model:ir.model.fields,field_description:mold_control.field_mold_request__company_id
+#: model:ir.model.fields,field_description:mold_control.field_mold_request_stage__company_id
+#: model:ir.model.fields,field_description:mold_control.field_new_table__company_id
+msgid "Compañía"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_control__components
+#: model:ir.model.fields,field_description:mold_control.field_new_table__components
+msgid "Componentes"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.ui.menu,name:mold_control.mold_control_menu_settings_root
+msgid "Configuraciones"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model,name:mold_control.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_control__attachment_count
+#: model:ir.model.fields,field_description:mold_control.field_new_table__attachment_count
+msgid "Contador de adjuntos"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.actions.act_window,name:mold_control.mold_control_optimo_action_window
+#: model:ir.module.category,name:mold_control.mold_managent_cat
+#: model:ir.ui.menu,name:mold_control.mold_control_menu_root
+#: model_terms:ir.ui.view,arch_db:mold_control.model_category_form_category
+#: model_terms:ir.ui.view,arch_db:mold_control.mold_control_form
+#: model_terms:ir.ui.view,arch_db:mold_control.mold_control_form_2
+msgid "Control de Moldes"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model,name:mold_control.model_mold_request_stage
+msgid "Control de etapas para solicitud de moldes"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model,name:mold_control.model_mold_control
+msgid "Control de moldes para fabricacion"
+msgstr ""
+
+#. module: mold_control
+#: model_terms:ir.actions.act_window,help:mold_control.mold_control_optimo_action_window
+msgid "Crear nuevo documento"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_model_category__create_uid
+#: model:ir.model.fields,field_description:mold_control.field_mold_attachment__create_uid
+#: model:ir.model.fields,field_description:mold_control.field_mold_control__create_uid
+#: model:ir.model.fields,field_description:mold_control.field_mold_request__create_uid
+#: model:ir.model.fields,field_description:mold_control.field_mold_request_stage__create_uid
+#: model:ir.model.fields,field_description:mold_control.field_mold_revision__create_uid
+#: model:ir.model.fields,field_description:mold_control.field_mold_tag__create_uid
+#: model:ir.model.fields,field_description:mold_control.field_new_table__create_uid
+#: model:ir.model.fields,field_description:mold_control.field_wizard_change_acceptable__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_model_category__create_date
+#: model:ir.model.fields,field_description:mold_control.field_mold_attachment__create_date
+#: model:ir.model.fields,field_description:mold_control.field_mold_control__create_date
+#: model:ir.model.fields,field_description:mold_control.field_mold_request__create_date
+#: model:ir.model.fields,field_description:mold_control.field_mold_request_stage__create_date
+#: model:ir.model.fields,field_description:mold_control.field_mold_revision__create_date
+#: model:ir.model.fields,field_description:mold_control.field_mold_tag__create_date
+#: model:ir.model.fields,field_description:mold_control.field_new_table__create_date
+#: model:ir.model.fields,field_description:mold_control.field_wizard_change_acceptable__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.actions.server,name:mold_control.ir_cron_mold_creation_ir_actions_server
+#: model:ir.cron,cron_name:mold_control.ir_cron_mold_creation
+#: model:ir.cron,name:mold_control.ir_cron_mold_creation
+msgid "Cron para crear moldes automaticamente"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.actions.server,name:mold_control.ir_cron_mold_state_validation_ir_actions_server
+#: model:ir.cron,cron_name:mold_control.ir_cron_mold_state_validation
+#: model:ir.cron,name:mold_control.ir_cron_mold_state_validation
+msgid "Cron para verificar estado de molde"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_control__code
+#: model:ir.model.fields,field_description:mold_control.field_mold_request__code
+#: model:ir.model.fields,field_description:mold_control.field_new_table__code
+msgid "Código"
+msgstr ""
+
+#. module: mold_control
+#: model_terms:ir.ui.view,arch_db:mold_control.view_mold_request_kanban
+msgid "Delete"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_attachment__name
+#: model:ir.model.fields,field_description:mold_control.field_mold_request__name
+#: model:ir.model.fields,field_description:mold_control.field_mold_request_stage__description
+#: model_terms:ir.ui.view,arch_db:mold_control.form_template
+msgid "Descripción"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields.selection,name:mold_control.selection__mold_control__state__deteriorado
+#: model:ir.model.fields.selection,name:mold_control.selection__mold_revision__state__deteriorado
+#: model_terms:ir.ui.view,arch_db:mold_control.mold_control_form
+msgid "Deteriorado"
+msgstr ""
+
+#. module: mold_control
+#: model_terms:ir.ui.view,arch_db:mold_control.mold_control_form
+msgid "Dimensiones"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_company_mixin__display_name
+#: model:ir.model.fields,field_description:mold_control.field_model_category__display_name
+#: model:ir.model.fields,field_description:mold_control.field_mold_attachment__display_name
+#: model:ir.model.fields,field_description:mold_control.field_mold_control__display_name
+#: model:ir.model.fields,field_description:mold_control.field_mold_request__display_name
+#: model:ir.model.fields,field_description:mold_control.field_mold_request_stage__display_name
+#: model:ir.model.fields,field_description:mold_control.field_mold_revision__display_name
+#: model:ir.model.fields,field_description:mold_control.field_mold_tag__display_name
+#: model:ir.model.fields,field_description:mold_control.field_new_table__display_name
+#: model:ir.model.fields,field_description:mold_control.field_repair_order__display_name
+#: model:ir.model.fields,field_description:mold_control.field_res_partner__display_name
+#: model:ir.model.fields,field_description:mold_control.field_wizard_change_acceptable__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_request_stage__fold
+msgid "Doblado en Kanban"
+msgstr ""
+
+#. module: mold_control
+#: model_terms:ir.ui.view,arch_db:mold_control.view_mold_request_kanban
+msgid "Dropdown menu"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_control__days
+#: model:ir.model.fields,field_description:mold_control.field_new_table__days
+msgid "Días para vencimiento"
+msgstr ""
+
+#. module: mold_control
+#: model_terms:ir.ui.view,arch_db:mold_control.view_mold_request_kanban
+msgid "Edit"
+msgstr ""
+
+#. module: mold_control
+#: model:mail.template,subject:mold_control.notificacion_eliminacion_molde
+msgid "Eliminación de molde"
+msgstr ""
+
+#. module: mold_control
+#: model_terms:ir.ui.view,arch_db:mold_control.form_template
+msgid "Email (Email de solicitante)"
+msgstr ""
+
+#. module: mold_control
+#: model_terms:ir.ui.view,arch_db:mold_control.form_template
+msgid "Enviar"
+msgstr ""
+
+#. module: mold_control
+#: model_terms:ir.ui.view,arch_db:mold_control.mold_control_form
+msgid "Enviar Status"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_control__state
+#: model:ir.model.fields,field_description:mold_control.field_mold_request__state
+#: model:ir.model.fields,field_description:mold_control.field_mold_revision__state
+#: model:ir.model.fields,field_description:mold_control.field_new_table__state
+#: model_terms:ir.ui.view,arch_db:mold_control.mold_control_search
+#: model_terms:ir.ui.view,arch_db:mold_control.mold_request_search
+msgid "Estado"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_company_mixin__state_2
+#: model:ir.model.fields,field_description:mold_control.field_mold_control__state_2
+#: model:ir.model.fields,field_description:mold_control.field_mold_request__state_2
+#: model:ir.model.fields,field_description:mold_control.field_mold_request_stage__state_2
+#: model:ir.model.fields,field_description:mold_control.field_new_table__state_2
+msgid "Estado 2"
+msgstr ""
+
+#. module: mold_control
+#: model_terms:ir.ui.view,arch_db:mold_control.report_mold_control_qweb
+msgid "Estado:"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_request__stage_id
+msgid "Etapa"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.ui.menu,name:mold_control.mold_request_stage_menu
+msgid "Etapas"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_tag__name
+msgid "Etiqueta"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.actions.act_window,name:mold_control.mold_request_stage_action_window
+#: model:ir.actions.act_window,name:mold_control.mold_tag_action_window
+#: model:ir.model.fields,field_description:mold_control.field_mold_control__tag_ids
+#: model:ir.model.fields,field_description:mold_control.field_new_table__tag_ids
+#: model:ir.ui.menu,name:mold_control.mold_tag_menu
+msgid "Etiquetas"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model,name:mold_control.model_mold_tag
+msgid "Etiquetas para moldes"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields.selection,name:mold_control.selection__mold_control__maintenance__externo
+#: model:ir.model.fields.selection,name:mold_control.selection__mold_control__origin__externo
+msgid "Externo"
+msgstr ""
+
+#. module: mold_control
+#: model_terms:ir.ui.view,arch_db:mold_control.mold_request_search
+msgid "Fecha"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_control__register_date
+#: model:ir.model.fields,field_description:mold_control.field_new_table__register_date
+msgid "Fecha de registro"
+msgstr ""
+
+#. module: mold_control
+#: model_terms:ir.ui.view,arch_db:mold_control.mold_request_form
+msgid "Fecha de solicitud"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_control__expiration_date
+#: model:ir.model.fields,field_description:mold_control.field_new_table__expiration_date
+msgid "Fecha de vencimiento"
+msgstr ""
+
+#. module: mold_control
+#: model_terms:ir.ui.view,arch_db:mold_control.report_mold_control_qweb
+msgid "Fecha:"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_control__message_follower_ids
+#: model:ir.model.fields,field_description:mold_control.field_mold_request__message_follower_ids
+#: model:ir.model.fields,field_description:mold_control.field_new_table__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_control__message_channel_ids
+#: model:ir.model.fields,field_description:mold_control.field_mold_request__message_channel_ids
+#: model:ir.model.fields,field_description:mold_control.field_new_table__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_control__message_partner_ids
+#: model:ir.model.fields,field_description:mold_control.field_mold_request__message_partner_ids
+#: model:ir.model.fields,field_description:mold_control.field_new_table__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,help:mold_control.field_mold_request__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_request__image
+msgid "Foto del Modelo"
+msgstr ""
+
+#. module: mold_control
+#: model_terms:ir.ui.view,arch_db:mold_control.mold_request_form
+msgid "Generar Molde"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.module.category,description:mold_control.mold_managent_cat
+msgid "Grupos de acceso a Mold Control"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields.selection,name:mold_control.selection__company_mixin__state_2__done
+#: model:ir.model.fields.selection,name:mold_control.selection__mold_control__state_2__done
+#: model:ir.model.fields.selection,name:mold_control.selection__mold_request__state_2__done
+#: model:ir.model.fields.selection,name:mold_control.selection__mold_request_stage__state_2__done
+msgid "Hecho"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields.selection,name:mold_control.selection__mold_request__priority__2
+msgid "High"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_company_mixin__id
+#: model:ir.model.fields,field_description:mold_control.field_model_category__id
+#: model:ir.model.fields,field_description:mold_control.field_mold_attachment__id
+#: model:ir.model.fields,field_description:mold_control.field_mold_control__id
+#: model:ir.model.fields,field_description:mold_control.field_mold_request__id
+#: model:ir.model.fields,field_description:mold_control.field_mold_request_stage__id
+#: model:ir.model.fields,field_description:mold_control.field_mold_revision__id
+#: model:ir.model.fields,field_description:mold_control.field_mold_tag__id
+#: model:ir.model.fields,field_description:mold_control.field_new_table__id
+#: model:ir.model.fields,field_description:mold_control.field_repair_order__id
+#: model:ir.model.fields,field_description:mold_control.field_res_partner__id
+#: model:ir.model.fields,field_description:mold_control.field_wizard_change_acceptable__id
+msgid "ID"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_request__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,help:mold_control.field_mold_request__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,help:mold_control.field_mold_control__message_needaction
+#: model:ir.model.fields,help:mold_control.field_mold_control__message_unread
+#: model:ir.model.fields,help:mold_control.field_mold_request__message_needaction
+#: model:ir.model.fields,help:mold_control.field_mold_request__message_unread
+#: model:ir.model.fields,help:mold_control.field_new_table__message_needaction
+#: model:ir.model.fields,help:mold_control.field_new_table__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,help:mold_control.field_mold_control__message_has_error
+#: model:ir.model.fields,help:mold_control.field_mold_control__message_has_sms_error
+#: model:ir.model.fields,help:mold_control.field_mold_request__message_has_error
+#: model:ir.model.fields,help:mold_control.field_mold_request__message_has_sms_error
+#: model:ir.model.fields,help:mold_control.field_new_table__message_has_error
+#: model:ir.model.fields,help:mold_control.field_new_table__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_control__image
+#: model:ir.model.fields,field_description:mold_control.field_new_table__image
+msgid "Imagen"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields.selection,name:mold_control.selection__mold_control__maintenance__interno
+#: model:ir.model.fields.selection,name:mold_control.selection__mold_control__origin__interno
+msgid "Interno"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_control__message_is_follower
+#: model:ir.model.fields,field_description:mold_control.field_mold_request__message_is_follower
+#: model:ir.model.fields,field_description:mold_control.field_new_table__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: mold_control
+#: model_terms:ir.ui.view,arch_db:mold_control.ficha_thank_you
+msgid ""
+"La ficha ha sido enviada, por favor tenga en cuenta que debe revisar su "
+"correo constantemente."
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_company_mixin____last_update
+#: model:ir.model.fields,field_description:mold_control.field_model_category____last_update
+#: model:ir.model.fields,field_description:mold_control.field_mold_attachment____last_update
+#: model:ir.model.fields,field_description:mold_control.field_mold_control____last_update
+#: model:ir.model.fields,field_description:mold_control.field_mold_request____last_update
+#: model:ir.model.fields,field_description:mold_control.field_mold_request_stage____last_update
+#: model:ir.model.fields,field_description:mold_control.field_mold_revision____last_update
+#: model:ir.model.fields,field_description:mold_control.field_mold_tag____last_update
+#: model:ir.model.fields,field_description:mold_control.field_new_table____last_update
+#: model:ir.model.fields,field_description:mold_control.field_repair_order____last_update
+#: model:ir.model.fields,field_description:mold_control.field_res_partner____last_update
+#: model:ir.model.fields,field_description:mold_control.field_wizard_change_acceptable____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_model_category__write_uid
+#: model:ir.model.fields,field_description:mold_control.field_mold_attachment__write_uid
+#: model:ir.model.fields,field_description:mold_control.field_mold_control__write_uid
+#: model:ir.model.fields,field_description:mold_control.field_mold_request__write_uid
+#: model:ir.model.fields,field_description:mold_control.field_mold_request_stage__write_uid
+#: model:ir.model.fields,field_description:mold_control.field_mold_revision__write_uid
+#: model:ir.model.fields,field_description:mold_control.field_mold_tag__write_uid
+#: model:ir.model.fields,field_description:mold_control.field_new_table__write_uid
+#: model:ir.model.fields,field_description:mold_control.field_wizard_change_acceptable__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_model_category__write_date
+#: model:ir.model.fields,field_description:mold_control.field_mold_attachment__write_date
+#: model:ir.model.fields,field_description:mold_control.field_mold_control__write_date
+#: model:ir.model.fields,field_description:mold_control.field_mold_request__write_date
+#: model:ir.model.fields,field_description:mold_control.field_mold_request_stage__write_date
+#: model:ir.model.fields,field_description:mold_control.field_mold_revision__write_date
+#: model:ir.model.fields,field_description:mold_control.field_mold_tag__write_date
+#: model:ir.model.fields,field_description:mold_control.field_new_table__write_date
+#: model:ir.model.fields,field_description:mold_control.field_wizard_change_acceptable__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.ui.menu,name:mold_control.model_category_menu
+msgid "Lista de Categorías"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.ui.menu,name:mold_control.mold_control_optimo_menu
+msgid "Lista de Moldes"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.ui.menu,name:mold_control.new_table_menu
+msgid "Lista de New Table"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields.selection,name:mold_control.selection__mold_request__priority__0
+msgid "Low"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_control__message_main_attachment_id
+#: model:ir.model.fields,field_description:mold_control.field_mold_request__message_main_attachment_id
+#: model:ir.model.fields,field_description:mold_control.field_new_table__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: mold_control
+#: model:res.groups,name:mold_control.mold_control_manager
+msgid "Manager"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_control__maintenance
+#: model:ir.model.fields,field_description:mold_control.field_new_table__maintenance
+msgid "Mantenimiento"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,help:mold_control.field_mold_control__category_id
+#: model:ir.model.fields,help:mold_control.field_new_table__category_id
+msgid "Material del que esta armado el molde"
+msgstr ""
+
+#. module: mold_control
+#: model_terms:ir.ui.view,arch_db:mold_control.form_template
+msgid "Medio"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields.selection,name:mold_control.selection__mold_request__priority__1
+msgid "Medium"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_control__message_has_error
+#: model:ir.model.fields,field_description:mold_control.field_mold_request__message_has_error
+#: model:ir.model.fields,field_description:mold_control.field_new_table__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_control__message_ids
+#: model:ir.model.fields,field_description:mold_control.field_mold_request__message_ids
+#: model:ir.model.fields,field_description:mold_control.field_new_table__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: mold_control
+#: model_terms:ir.ui.view,arch_db:mold_control.mold_control_form
+msgid "Miscelaneos"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_control__model
+#: model:ir.model.fields,field_description:mold_control.field_mold_control__product_id
+#: model:ir.model.fields,field_description:mold_control.field_mold_request__product_id
+#: model:ir.model.fields,field_description:mold_control.field_new_table__model
+#: model:ir.model.fields,field_description:mold_control.field_new_table__product_id
+msgid "Modelo"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model,name:mold_control.model_company_mixin
+msgid "Modelo abstracto para agregar campo de compañía"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_attachment__mold_control_id
+#: model:ir.model.fields,field_description:mold_control.field_mold_control__name
+#: model:ir.model.fields,field_description:mold_control.field_mold_revision__mold_id
+#: model:ir.model.fields,field_description:mold_control.field_new_table__name
+#: model:ir.model.fields,field_description:mold_control.field_repair_order__mold_control_id
+#: model:ir.model.fields,field_description:mold_control.field_wizard_change_acceptable__mold_control_id
+msgid "Molde"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_model_category__mold_control_ids
+#: model:ir.model.fields,field_description:mold_control.field_mold_request__mold_ids
+#: model:ir.model.fields,field_description:mold_control.field_res_partner__mold_control_ids
+#: model:ir.model.fields,field_description:mold_control.field_res_users__mold_control_ids
+#: model_terms:ir.ui.view,arch_db:mold_control.mold_control_form_2
+#: model_terms:ir.ui.view,arch_db:mold_control.mold_request_form
+msgid "Moldes"
+msgstr ""
+
+#. module: mold_control
+#: model_terms:ir.ui.view,arch_db:mold_control.mold_control_search
+msgid "Moldes Óptimos"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_wizard_change_acceptable__description
+msgid "Motivo"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_control__description
+#: model:ir.model.fields,field_description:mold_control.field_new_table__description
+msgid "Motivo para cambiar a aceptable"
+msgstr ""
+
+#. module: mold_control
+#: model_terms:ir.ui.view,arch_db:mold_control.form_template
+msgid "Muy Alto"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_request__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.actions.act_window,name:mold_control.new_table_action_window
+#: model:ir.model.fields,field_description:mold_control.field_new_table__new_table_id
+msgid "New Table"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_request__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_request__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_request__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_model_category__name
+msgid "Nombre"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_attachment__attachment_filename
+msgid "Nombre de Archivo"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_request_stage__name
+msgid "Nombre de la etapa"
+msgstr ""
+
+#. module: mold_control
+#: model:mail.template,subject:mold_control.notificacion_creacion_molde
+msgid "Notificación de creación de molde"
+msgstr ""
+
+#. module: mold_control
+#: model:mail.template,subject:mold_control.mold_control_state_template
+msgid "Notificación de estado de molde ${object.code}"
+msgstr ""
+
+#. module: mold_control
+#: model:mail.template,subject:mold_control.notificacion_modificacion_molde
+msgid "Notificación de modificación de datos de molde"
+msgstr ""
+
+#. module: mold_control
+#: model:mail.template,subject:mold_control.mold_request_template
+msgid "Nueva solicitud de molde por ${object.partner_id.name} "
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_control__message_needaction_counter
+#: model:ir.model.fields,field_description:mold_control.field_mold_request__message_needaction_counter
+#: model:ir.model.fields,field_description:mold_control.field_new_table__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_control__message_has_error_counter
+#: model:ir.model.fields,field_description:mold_control.field_mold_request__message_has_error_counter
+#: model:ir.model.fields,field_description:mold_control.field_new_table__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,help:mold_control.field_mold_control__message_needaction_counter
+#: model:ir.model.fields,help:mold_control.field_mold_request__message_needaction_counter
+#: model:ir.model.fields,help:mold_control.field_new_table__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,help:mold_control.field_mold_control__message_has_error_counter
+#: model:ir.model.fields,help:mold_control.field_mold_request__message_has_error_counter
+#: model:ir.model.fields,help:mold_control.field_new_table__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,help:mold_control.field_mold_control__message_unread_counter
+#: model:ir.model.fields,help:mold_control.field_mold_request__message_unread_counter
+#: model:ir.model.fields,help:mold_control.field_new_table__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_revision__name
+msgid "Observación"
+msgstr ""
+
+#. module: mold_control
+#: model_terms:ir.ui.view,arch_db:mold_control.report_mold_control_qweb
+msgid "Observación:"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields.selection,name:mold_control.selection__mold_control__state__optimo
+#: model:ir.model.fields.selection,name:mold_control.selection__mold_revision__state__optimo
+#: model_terms:ir.ui.view,arch_db:mold_control.mold_control_form
+msgid "Optimo"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_control__origin
+#: model:ir.model.fields,field_description:mold_control.field_new_table__origin
+msgid "Origen"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_control__list_price
+#: model:ir.model.fields,field_description:mold_control.field_new_table__list_price
+msgid "Precio de venta de producto"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,help:mold_control.field_mold_control__list_price
+#: model:ir.model.fields,help:mold_control.field_new_table__list_price
+msgid "Price at which the product is sold to customers."
+msgstr ""
+
+#. module: mold_control
+#: model_terms:ir.ui.view,arch_db:mold_control.form_template
+msgid "Prioridad"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_request__priority
+msgid "Priority"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_control__partner_id
+#: model:ir.model.fields,field_description:mold_control.field_new_table__partner_id
+msgid "Propietario"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,help:mold_control.field_mold_control__partner_id
+#: model:ir.model.fields,help:mold_control.field_new_table__partner_id
+msgid "Propietario del molde"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,help:mold_control.field_mold_control__maintenance
+#: model:ir.model.fields,help:mold_control.field_new_table__maintenance
+msgid "Quien se encrga de darle mantenimiento al molde"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,help:mold_control.field_mold_control__model
+#: model:ir.model.fields,help:mold_control.field_new_table__model
+msgid "Referencia del modelo a usar"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model,name:mold_control.model_repair_order
+msgid "Repair Order"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_control__repair_order_ids
+#: model:ir.model.fields,field_description:mold_control.field_new_table__repair_order_ids
+#: model_terms:ir.ui.view,arch_db:mold_control.mold_control_form
+msgid "Reparaciones"
+msgstr ""
+
+#. module: mold_control
+#: model_terms:ir.ui.view,arch_db:mold_control.mold_control_form
+msgid "Reparar"
+msgstr ""
+
+#. module: mold_control
+#: model:mail.template,report_name:mold_control.mold_control_state_template
+msgid "Reporte de Estado de Molde"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.actions.report,name:mold_control.mold_control_report_action
+msgid "Reporte de Moldes"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_request__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_control__revision_ids
+#: model:ir.model.fields,field_description:mold_control.field_new_table__revision_ids
+#: model_terms:ir.ui.view,arch_db:mold_control.mold_control_form
+msgid "Revisiones"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model,name:mold_control.model_mold_revision
+msgid "Revisión para moldes"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_control__message_has_sms_error
+#: model:ir.model.fields,field_description:mold_control.field_mold_request__message_has_sms_error
+#: model:ir.model.fields,field_description:mold_control.field_new_table__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_request_stage__sequence
+msgid "Secuencia"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_request__partner_id
+#: model_terms:ir.ui.view,arch_db:mold_control.form_template
+msgid "Solicitante"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_control__mold_request_id
+#: model:ir.model.fields,field_description:mold_control.field_new_table__mold_request_id
+msgid "Solicitud"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.actions.act_window,name:mold_control.mold_request_action_window
+#: model:ir.ui.menu,name:mold_control.mold_request_menu
+msgid "Solicitud de Moldes"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model,name:mold_control.model_mold_request
+msgid "Solicitud para creación de moldes"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,help:mold_control.field_mold_request__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: mold_control
+#: model_terms:ir.ui.view,arch_db:mold_control.form_template
+msgid "Teléfono"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields.selection,name:mold_control.selection__mold_control__maintenance__terceros
+msgid "Tercero"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,help:mold_control.field_mold_request__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_control__message_unread
+#: model:ir.model.fields,field_description:mold_control.field_mold_request__message_unread
+#: model:ir.model.fields,field_description:mold_control.field_new_table__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_control__message_unread_counter
+#: model:ir.model.fields,field_description:mold_control.field_mold_request__message_unread_counter
+#: model:ir.model.fields,field_description:mold_control.field_new_table__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_revision__user_id
+#: model:res.groups,name:mold_control.all_users_mold_control
+msgid "Usuario"
+msgstr ""
+
+#. module: mold_control
+#: model_terms:ir.ui.view,arch_db:mold_control.report_mold_control_qweb
+msgid "Usuario:"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields.selection,name:mold_control.selection__mold_request__priority__3
+msgid "Very High"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_control__validity
+#: model:ir.model.fields,field_description:mold_control.field_new_table__validity
+msgid "Vigencia"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_control__volumen
+#: model:ir.model.fields,field_description:mold_control.field_new_table__volumen
+msgid "Volumen"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_control__website_message_ids
+#: model:ir.model.fields,field_description:mold_control.field_mold_request__website_message_ids
+#: model:ir.model.fields,field_description:mold_control.field_new_table__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,help:mold_control.field_mold_control__website_message_ids
+#: model:ir.model.fields,help:mold_control.field_mold_request__website_message_ids
+#: model:ir.model.fields,help:mold_control.field_new_table__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.actions.act_window,name:mold_control.wizard_change_acceptable_action_window
+msgid "Wizard para cambiar a aceptable"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model,name:mold_control.model_wizard_change_acceptable
+msgid "Wizard para cambiar el molde a aceptable"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.constraint,message:mold_control.constraint_mold_tag_name_unique
+msgid "Ya existe esta etiqueta!"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model,name:mold_control.model_new_table
+msgid "new.table"
+msgstr ""
+
+#. module: mold_control
+#: model:ir.model.fields,field_description:mold_control.field_mold_control__area
+#: model:ir.model.fields,field_description:mold_control.field_new_table__area
+msgid "Área"
+msgstr ""

@@ -6,7 +6,7 @@
         <field name="arch" type="xml">
             <tree editable="bottom">
                 <field name="mold_id" invisible="1"/>
-                <field name="user_id"/>
+                <field name="user_id" readonly="1"/>
                 <field name="state"/>
                 <field name="name"/>
                 <field name="create_date"/>

@@ -56,6 +56,7 @@
                     <button name="button_optimo" class="btn-primary" string="Optimo" attrs="{'invisible':[('state','=', 'optimo')]}" type="object"/>
                     <button name="button_aceptable" class="btn-warning" string="Aceptable" attrs="{'invisible':[('state','=', 'aceptable')]}" type="object"/>
                     <button name="button_deteriorado" class="btn-danger" string="Deteriorado" attrs="{'invisible':[('state','=', 'deteriorado')]}" type="object"/>
+                    <button name="button_send_mail" icon="fa-envelope" class="btn-info" string="Enviar Status" type="object"/>
                     <button name="%(wizard_change_acceptable_action_window)d" class="btn-info" string="Cambiar a Aceptable XML" context="{'default_mold_control_id': active_id}" attrs="{'invisible':[('state','=', 'aceptable')]}" type="action"/>
                     <field name="state" widget="statusbar"/>
                 </header>
@@ -78,7 +79,8 @@
                             <field name="code" readonly="1"/>
                             <field name="name" required="1"/>
                             <field name="company_id"/>
-                            <field name="partner_id" attrs="{'invisible': [('maintenance', '=', 'interno')]}"/>
+                            <field name="mold_request_id"/>
+                            <field name="partner_id"/>
                         </group>
                         <group>
                             <field name="image" widget="image" class="oe_avatar"/>
@@ -114,7 +116,7 @@
                         </page>
                         <page string="Revisiones">
                             <group>
-                                <field name="revision_ids"/>
+                                <field name="revision_ids" nolabel="1"/>
                             </group>
                             <group>
                                 <field name="description"/>
@@ -124,7 +126,14 @@
                                     <field name="attachment_ids"  widget="many2many_binary"/>
                                 </group>
                             </group>
-
+                        </page>
+                        <page string="Reparaciones">
+                            <group>
+                                <button name="button_repair" icon="fa-cogs" class="btn-danger" string="Reparar" type="object"/>
+                            </group>
+                            <group>
+                                <field name="repair_order_ids" nolabel="1"/>
+                            </group>
                         </page>
                     </notebook>
                 </sheet>
@@ -176,6 +185,7 @@
 <!--    </record>-->
 
     <menuitem name="Control de Moldes"
+              web_icon="mold_control,static/description/icon.png"
               id="mold_control_menu_root"/>
 
     <menuitem name="Configuraciones"

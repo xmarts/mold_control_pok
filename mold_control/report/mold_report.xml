@@ -15,64 +15,62 @@
         <t t-call="web.html_container">
             <t t-foreach="docs" t-as="o">
                 <div class="page">
+                    <div class="row" style="margin-top:10px;">
+                        <div class="col-lg-12">
+                            <h2>
+                                <span>Estado de Molde</span>
+                            </h2>
+                        </div>
+                        <div class="col-lg-12">
+                            <span>Solicitante: </span><span t-esc="o.partner_id.name"/>
+                        </div>
+                    </div>
                     <table class="table table-sm" style="width:100%;border-collapse:collapse;text-align:center">
                         <thead>
-                            <th style="font-weight:bold;font-size:30px;color:red">
-                                CÓDIGO:
+                            <th>
+                                Usuario:
                             </th>
                             <th>
-                                MOLDE:
+                                Estado:
                             </th>
                             <th>
-                                FECHA DE REGISTRO:
+                                Observación:
                             </th>
                             <th>
-                                BASE:
-                            </th>
-                            <th>
-                                ALTURA:
-                            </th>
-                            <th>
-                                VARIABLE:
+                                Fecha:
                             </th>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>
-                                    <span t-esc="o.code"/>
-                                </td>
-                                <td>
-                                   <span t-esc="o.code"/>
-                                </td>
-                                <td>
-                                  <span t-field="o.name"/>
-                                </td>
-                                <td>
-                                     <span t-field="o.register_date"/>
-                                </td>
-                                <td>
-                                    <span t-field="o.base"/>
-                                </td>
-                                <td>
-                                     <span t-field="o.height"/>
-                                </td>
-                                <td>
-                                    <t t-set="line" t-value="1+2"/>
-                                    <span t-esc="line"/>
-                                </td>
-                            </tr>
-<!--                            <tr t-foreach="o.invoice_line_ids" t-as="line">-->
-<!--                                <td style="border: 1px solid"><span t-esc="line.product_id.default_code or ' '"/></td>-->
-<!--                                <td style="border: 1px solid"><span t-esc="'%.2f' % line.quantity"/></td>-->
-<!--                                <td style="border: 1px solid"><span t-esc="line.name or ' '"/></td>-->
-<!--                                <td style="border: 1px solid"><span t-field="line.price_unit"-->
-<!--                                                                    t-options='{"widget": "monetary", "display_currency": o.currency_id}'/></td>-->
-<!--                                &lt;!&ndash; <td style="border: 1px solid"><span >0.00</span></td>-->
-<!--                                <td style="border: 1px solid"><span >0.00</span></td> &ndash;&gt;-->
-<!--                                <td style="border: 1px solid"><span t-esc="'%.2f' % line.discount "/></td>-->
-<!--                                <td style="border: 1px solid"><span t-field="line.price_subtotal"-->
-<!--                                                                    t-options='{"widget": "monetary", "display_currency": o.currency_id}'/></td>-->
+<!--                            <tr>-->
+<!--                                <td>-->
+<!--                                    <span t-esc="o.code"/>-->
+<!--                                </td>-->
+<!--                                <td>-->
+<!--                                   <span t-esc="o.code"/>-->
+<!--                                </td>-->
+<!--                                <td>-->
+<!--                                  <span t-field="o.name"/>-->
+<!--                                </td>-->
+<!--                                <td>-->
+<!--                                     <span t-field="o.register_date"/>-->
+<!--                                </td>-->
+<!--                                <td>-->
+<!--                                    <span t-field="o.base"/>-->
+<!--                                </td>-->
+<!--                                <td>-->
+<!--                                     <span t-field="o.height"/>-->
+<!--                                </td>-->
+<!--                                <td>-->
+<!--                                    <t t-set="line" t-value="1+2"/>-->
+<!--                                    <span t-esc="line"/>-->
+<!--                                </td>-->
 <!--                            </tr>-->
+                            <tr t-foreach="o.revision_ids" t-as="line">
+                                <td style="border: 1px solid"><span t-esc="line.user_id.name"/></td>
+                                <td style="border: 1px solid"><span t-esc="line.state"/></td>
+                                <td style="border: 1px solid"><span t-esc="line.name"/></td>
+                                <td style="border: 1px solid"><span t-field="line.create_date"/></td>
+                            </tr>
                         </tbody>
                     </table>
 
